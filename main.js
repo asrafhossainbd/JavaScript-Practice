@@ -888,5 +888,6 @@ var budgetcontroller = (function(){
         }
     }
 })();
+budgetcontroller.publicTest(10);
 
 
