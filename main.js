@@ -922,12 +922,23 @@
 //1. Create Module   
 var module = (function(){
     //Private Area
-
+    var userDetails = function(name, yearOfBirth){
+        var name = name;
+        var yearOfBirth = yearOfBirth;
+        var age;
+        var ageCalculator = function(yearOfBirth){
+            age = 2019 - yearOfBirth;
+            return age 
+        };
+        ageCalculator(yearOfBirth);
+        console.log('Hi ' + name +', ' + yearOfBirth + ', ' + age);
+    }
     return {
         //Public Area
         myFunction: function(){
-            console.log('Hi');
-        }
+            userDetails('Ashik', 1996);
+        },
+        
     }
 })();
 module.myFunction();
