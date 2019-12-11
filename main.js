@@ -877,33 +877,57 @@
 
 //Module Pattern
 
-var budgetcontroller = (function(){
-    var x = 23;
-    var add = function(a){
-        return x + a;
-    }
-    return{
-        publicTest: function(b){
-            return add(b);
+// var budgetcontroller = (function(){
+//     var x = 23;
+//     var add = function(a){
+//         return x + a;
+//     }
+//     return{
+//         publicTest: function(b){
+//             return add(b);
+//         }
+//     }
+// })();
+
+
+// var UIController = (function(){
+
+//         //some Code
+
+// })();
+
+// var controller = (function(budgetCtrl, UICtrl){
+//    var z =  budgetCtrl.publicTest(5);
+//    return{
+//        anotherPublic: function(){
+//            return console.log(z);
+//        }
+//    }
+
+// })(budgetcontroller, UIController);
+
+// controller.anotherPublic();
+
+// Module Pattern Details
+
+    //Create Module
+    //Export Module
+    //Understanding "return": returning an object with a function as a property
+    //Private Mathod and Private Property : convention, uses.
+    //Different way of making object.
+    //Revealing Module Pattern.
+    //Passing data from outsite
+    //Push data to a array.
+
+//1. Create Module   
+var module = (function(){
+    //Private Area
+
+    return {
+        //Public Area
+        myFunction: function(){
+            console.log('Hi');
         }
     }
 })();
-
-
-var UIController = (function(){
-
-        //some Code
-
-})();
-
-var controller = (function(budgetCtrl, UICtrl){
-   var z =  budgetCtrl.publicTest(5);
-   return{
-       anotherPublic: function(){
-           return console.log(z);
-       }
-   }
-
-})(budgetcontroller, UIController);
-
-controller.anotherPublic();
+module.myFunction();
