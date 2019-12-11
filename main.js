@@ -884,10 +884,26 @@ var budgetcontroller = (function(){
     }
     return{
         publicTest: function(b){
-            console.log(add(b));
+            return add(b);
         }
     }
 })();
-budgetcontroller.publicTest(10);
 
 
+var UIController = (function(){
+
+        //some Code
+
+})();
+
+var controller = (function(budgetCtrl, UICtrl){
+   var z =  budgetCtrl.publicTest(5);
+   return{
+       anotherPublic: function(){
+           return console.log(z);
+       }
+   }
+
+})(budgetcontroller, UIController);
+
+controller.anotherPublic();
